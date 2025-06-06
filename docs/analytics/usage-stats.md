@@ -25,44 +25,38 @@ implementation focuses on achieving optimal compression ratios while maintaining
 ### Random Sequences
 
 1. 50 numbers test
-
-   - Input: Random sequence of 50 numbers
-   - Expected compression: >50%
+    - Input: Random sequence of 50 numbers
+    - Expected compression: >50%
 
 2. 100 numbers test
-
-   - Input: Random sequence of 100 numbers
-   - Expected compression: >50%
+    - Input: Random sequence of 100 numbers
+    - Expected compression: >50%
 
 3. 500 numbers test
-
-   - Input: Random sequence of 500 numbers
-   - Expected compression: >50%
+    - Input: Random sequence of 500 numbers
+    - Expected compression: >50%
 
 4. 1000 numbers test
-   - Input: Random sequence of 1000 numbers
-   - Expected compression: >50%
+    - Input: Random sequence of 1000 numbers
+    - Expected compression: >50%
 
 ### Edge Cases
 
 1. Single-digit numbers
-
-   - Input: Sequence of numbers 1-9
-   - Expected compression: >50%
+    - Input: Sequence of numbers 1-9
+    - Expected compression: >50%
 
 2. Double-digit numbers
-
-   - Input: Sequence of numbers 10-99
-   - Expected compression: >50%
+    - Input: Sequence of numbers 10-99
+    - Expected compression: >50%
 
 3. Triple-digit numbers
-
-   - Input: Sequence of numbers 100-300
-   - Expected compression: >50%
+    - Input: Sequence of numbers 100-300
+    - Expected compression: >50%
 
 4. Mixed length (900 numbers)
-   - Input: Each number repeated 3 times (1-300)
-   - Expected compression: >50%
+    - Input: Each number repeated 3 times (1-300)
+    - Expected compression: >50%
 
 ## Implementation Notes
 

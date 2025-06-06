@@ -1,63 +1,52 @@
-# Set Compression Algorithm Analysis
+# Integer Set Compression Analysis
 
-## Overview
+## Problem Statement
 
-Design and implementation analysis of a specialized compression algorithm for integer sets,
-focusing on achieving optimal compression ratios while maintaining data integrity.
+Implement efficient serialization and deserialization functions for an unordered set of integers.
 
 ## Requirements
 
 ### Input Constraints
 
-- Data Type: Set of integers (unordered)
-- Value Range: 1-300 (inclusive)
-- Maximum Size: 1000 elements
+- Integer values range: 1 to 300
+- Set size: up to 1000 elements
+- Element order is not significant
+- Serialized output must use ASCII characters only
 
-### Compression Requirements
+### Performance Goals
 
-- Output Format: ASCII-encoded string
-- Compression Target: Minimum 50% reduction
-- Algorithm Type: Custom compression (no standard algorithms)
-- Process: Lossless compression/decompression
+- Achieve minimum 50% compression ratio compared to basic serialization
+- Maintain data integrity during compression/decompression cycle
 
-## Algorithm Design
+## Implementation
 
-### Key Concepts
+The solution should provide:
 
-- Differential Encoding: Store differences between adjacent numbers instead of absolute values
-- ASCII Character Encoding: Utilize ASCII character range for compact representation
-- Sorted Data Optimization: Leverage ordered sequences for better compression
+1. Serialization function: array of integers → ASCII string
+2. Deserialization function: ASCII string → array of integers
 
-### Strategy
+## Test Cases
 
-1. Sort input numbers to minimize differences between adjacent values
-2. Calculate differences between consecutive numbers
-3. Encode differences using ASCII characters
-4. Include metadata for reconstruction
+### Basic Tests
 
-### Compression Analysis
+- Short sequences with few elements
+- Random sequences:
+    - 50 elements
+    - 100 elements
+    - 500 elements
+    - 1000 elements
 
-- Expected Compression Ratio: 60-75% for sorted sequences
-- Performance Factors:
-  - Data ordering (sorted vs random)
-  - Number distribution
-  - Sequence length
-  - Value range spread
+### Edge Cases
 
-### Implementation Notes
+- All single-digit numbers (1-9)
+- All double-digit numbers (10-99)
+- All triple-digit numbers (100-300)
+- Uniform distribution (3 occurrences of each number, ~900 total)
 
-- ASCII encoding range: 33-126 (printable characters)
-- Format: [metadata][encoded differences]
-- Special handling for sequence boundaries
-- Optimization for common difference patterns
+### Test Documentation
 
-### Detailed Analysis
+Each test case should include:
 
-- Differential encoding reduces storage requirements by storing deltas
-- ASCII character encoding provides human-readable compressed output
-- Expected compression ratio improvements:
-  - Ordered sequences: 70-80%
-  - Random sequences: 50-60%
-  - Mixed sequences: 55-65%
-
-### Interface
+- Original set content
+- Compressed string representation
+- Compression ratio analysis
