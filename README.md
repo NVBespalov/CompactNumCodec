@@ -42,4 +42,53 @@ The implementation includes the following test scenarios:
 
 ### Setup
 
-1. Clone the repository:
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+## Testing
+
+### Jest Setup
+
+The project uses Jest with TypeScript support (ts-jest) for testing. The setup includes:
+
+- Jest for test running and assertions
+- ts-jest for TypeScript support
+- @types/jest for TypeScript type definitions
+
+### Test-Driven Development (TDD)
+
+This project follows TDD methodology:
+
+1. Write a failing test
+2. Write minimal code to make the test pass
+3. Refactor the code while keeping tests green
+
+### Running Tests
+
+To run the test suite:
+
+   ```bash
+   npm run test
+   ```
+
+### Test Organization Structure
+
+Tests are organized following these conventions:
+
+1. Place tests in `__tests__` directory or alongside source files
+2. Use `.test.ts` or `.spec.ts` suffix for test files
+3. Example folder structure:
+   ```
+   project-root/
+   ├── src/
+   │   └── compression.ts
+   └── __tests__/
+       └── compression.test.ts
+   ```
+
+### Example Test Implementation
+
+A typical test file structure:
