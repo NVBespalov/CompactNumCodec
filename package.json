@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "lint": "eslint . --ext .js,.ts"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,10 @@
     "typescript": "^5.8.3"
   },
   "devDependencies": {
-    "prettier": "^3.5.3"
+    "@eslint/js": "^9.28.0",
+    "eslint": "^9.28.0",
+    "globals": "^16.2.0",
+    "prettier": "^3.5.3",
+    "typescript-eslint": "^8.33.1"
   }
 }
