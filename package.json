@@ -3,15 +3,28 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint . --ext .js,.ts"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "typescript",
+    "sequences",
+    "algorithms",
+    "mathematics"
+  ],
+  "author": "Nick Bespalov <nvbespalov@gmail.com>",
   "license": "ISC",
-  "description": "",
+  "description": "A TypeScript library for working with mathematical sequences",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johndoe/sequences.git"
+  },
+  "bugs": {
+    "url": "https://github.com/johndoe/sequences/issues"
+  },
+  "homepage": "https://github.com/johndoe/sequences#readme",
   "dependencies": {
     "typescript": "^5.8.3"
   },

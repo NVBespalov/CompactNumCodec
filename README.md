@@ -1,3 +1,8 @@
+[![Build Status](https://github.com/NVBespalov/CompactNumCodec/workflows/CI/badge.svg)](https://github.com/NVBespalov/CompactNumCodec/actions)
+[![Coverage Status](https://coveralls.io/repos/github/yourusername/number-sequence-compression/badge.svg?branch=main)](https://coveralls.io/github/yourusername/number-sequence-compression?branch=main)
+[![npm version](https://badge.fury.io/js/number-sequence-compression.svg)](https://badge.fury.io/js/number-sequence-compression)
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+
 # Number Sequence Compression
 
 A TypeScript implementation of a compact serialization/deserialization algorithm for number sequences.
@@ -74,7 +79,7 @@ To run the test suite:
    npm run test
    ```
 
-### Test Organization Structure
+## Usage
 
 Tests are organized following these conventions:
 
