@@ -1,52 +1,24 @@
-# Integer Set Compression Analysis
+# Integer Set Compression Algorithm
 
 ## Problem Statement
 
-Implement efficient serialization and deserialization functions for an unordered set of integers.
+Design and implement an efficient compression algorithm for sets of integers with specific constraints and requirements.
 
-## Requirements
+## Input Specifications
 
-### Input Constraints
+### Data Constraints
 
-- Integer values range: 1 to 300
-- Set size: up to 1000 elements
-- Element order is not significant
-- Serialized output must use ASCII characters only
+- Type: Set or array of integers (unordered)
+- Value Range: 1 to 300 (inclusive)
+- Maximum Elements: 1000
+- Order: Not significant
 
-### Performance Goals
+### Compression Requirements
 
-- Achieve minimum 50% compression ratio compared to basic serialization
-- Maintain data integrity during compression/decompression cycle
+- Output Format: ASCII-compatible string only
+- Compression Target: Minimum 50% size reduction
+- Method: Custom encoding (no standard compression algorithms)
 
-## Implementation
+## Implementation Details
 
-The solution should provide:
-
-1. Serialization function: array of integers → ASCII string
-2. Deserialization function: ASCII string → array of integers
-
-## Test Cases
-
-### Basic Tests
-
-- Short sequences with few elements
-- Random sequences:
-    - 50 elements
-    - 100 elements
-    - 500 elements
-    - 1000 elements
-
-### Edge Cases
-
-- All single-digit numbers (1-9)
-- All double-digit numbers (10-99)
-- All triple-digit numbers (100-300)
-- Uniform distribution (3 occurrences of each number, ~900 total)
-
-### Test Documentation
-
-Each test case should include:
-
-- Original set content
-- Compressed string representation
-- Compression ratio analysis
+### Core Functions
