@@ -16,7 +16,7 @@ describe('serialize', () => {
     expect(result).toBeDefined();
     expect(result.compressionRatio).toBeGreaterThan(0);
     const decoded = deserialize(result.serialized);
-    decoded.forEach((num, i) => {
+    decoded.forEach((num) => {
       expect(input.includes(num));
     });
   });
