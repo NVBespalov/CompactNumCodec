@@ -75,9 +75,9 @@ This project follows TDD methodology:
 
 To run the test suite:
 
-   ```bash
-   npm run test
-   ```
+```bash
+npm run test
+```
 
 ## Usage
 
@@ -109,10 +109,10 @@ You can run the compression tool directly from the command line using the built-
 
 **Example:**
 
-
 **Input format:**  
 The input file should be a valid JSON array with integers in the range `[1, 300]`, with up to 1000 elements.
 
 After running, the CLI will display:
+
 - Progress bar
 - Handy info: original and compressed sizes, plus compression ratio.

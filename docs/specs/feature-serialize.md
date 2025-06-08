@@ -10,15 +10,15 @@ algorithm.
 ### Functional Requirements
 
 1. Input data:
-    - Array of integers (unordered set)
-    - Numbers range: 1 to 300
-    - Array length: up to 1000 elements
+   - Array of integers (unordered set)
+   - Numbers range: 1 to 300
+   - Array length: up to 1000 elements
 2. Output format:
-    - ASCII-only string representation
-    - Compression ratio target: at least 50% compared to basic serialization
+   - ASCII-only string representation
+   - Compression ratio target: at least 50% compared to basic serialization
 3. Functions:
-    - serialize(numbers: number[]): string
-    - deserialize(encoded: string): number[]
+   - serialize(numbers: number[]): string
+   - deserialize(encoded: string): number[]
 
 ### Technical Requirements
 
@@ -39,26 +39,26 @@ algorithm.
 ### Test Cases
 
 1. Simple cases:
-    - Small arrays (3-5 elements)
-    - Single digit numbers
+   - Small arrays (3-5 elements)
+   - Single digit numbers
 2. Random data:
-    - 50 numbers
-    - 100 numbers
-    - 500 numbers
-    - 1000 numbers
+   - 50 numbers
+   - 100 numbers
+   - 500 numbers
+   - 1000 numbers
 3. Edge cases:
-    - All single-digit numbers
-    - All two-digit numbers
-    - All three-digit numbers
-    - 900 numbers (300 numbers repeated 3 times)
+   - All single-digit numbers
+   - All two-digit numbers
+   - All three-digit numbers
+   - 900 numbers (300 numbers repeated 3 times)
 
 ## Performance Metrics
 
 ### Compression Ratio Measurement
 
-1. Original size: numbers.length * (avg digits per number)
+1. Original size: numbers.length \* (avg digits per number)
 2. Compressed size: encoded string length
-3. Compression ratio = (original - compressed) / original * 100%
+3. Compression ratio = (original - compressed) / original \* 100%
 
 ### Acceptance Criteria
 

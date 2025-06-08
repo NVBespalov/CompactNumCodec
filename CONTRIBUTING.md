@@ -48,25 +48,25 @@ Format: `<type>(<scope>): <subject>`
 
 `<type>` (required):
 
-* feat: New feature or enhancement
-* fix: Bug fix
-* docs: Documentation changes only
-* style: Code style/formatting changes (no functionality change)
-* refactor: Code changes that neither fix bugs nor add features
-* test: Adding or modifying tests
-* chore: Build process, tooling or dependency updates
+- feat: New feature or enhancement
+- fix: Bug fix
+- docs: Documentation changes only
+- style: Code style/formatting changes (no functionality change)
+- refactor: Code changes that neither fix bugs nor add features
+- test: Adding or modifying tests
+- chore: Build process, tooling or dependency updates
 
 `<scope>` (optional):
 
-* Module/component name affected
-* Can be omitted if change spans multiple areas
+- Module/component name affected
+- Can be omitted if change spans multiple areas
 
 `<subject>` (required):
 
-* Clear, concise description
-* Written in imperative present tense
-* No period at the end
-* Max 70 characters
+- Clear, concise description
+- Written in imperative present tense
+- No period at the end
+- Max 70 characters
 
 ## Testing
 

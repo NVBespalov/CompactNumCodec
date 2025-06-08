@@ -39,10 +39,10 @@ focusing on achieving optimal compression ratios while maintaining data integrit
 
 - Expected Compression Ratio: 60-75% for sorted sequences
 - Performance Factors:
-    - Data ordering (sorted vs random)
-    - Number distribution
-    - Sequence length
-    - Value range spread
+  - Data ordering (sorted vs random)
+  - Number distribution
+  - Sequence length
+  - Value range spread
 
 ### Implementation Notes
 
@@ -56,8 +56,8 @@ focusing on achieving optimal compression ratios while maintaining data integrit
 - Differential encoding reduces storage requirements by storing deltas
 - ASCII character encoding provides human-readable compressed output
 - Expected compression ratio improvements:
-    - Ordered sequences: 70-80%
-    - Random sequences: 50-60%
-    - Mixed sequences: 55-65%
+  - Ordered sequences: 70-80%
+  - Random sequences: 50-60%
+  - Mixed sequences: 55-65%
 
 ### Interface
