@@ -1,5 +1,5 @@
 [![Build Status](https://github.com/NVBespalov/CompactNumCodec/workflows/Build%20Project/badge.svg)](https://github.com/NVBespalov/CompactNumCodec/actions)
-[![Coverage Status](https://coveralls.io/repos/github/NVBespalov/CompactNumCodec/badge.svg?branch=main)](https://coveralls.io/github/NVBespalov/CompactNumCodec?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/NVBespalov/CompactNumCodec/badge.svg?branch=develop)](https://coveralls.io/github/NVBespalov/CompactNumCodec?branch=develop)
 [![npm version](https://badge.fury.io/js/number-sequence-compression.svg)](https://badge.fury.io/js/CompactNumCodec)
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
