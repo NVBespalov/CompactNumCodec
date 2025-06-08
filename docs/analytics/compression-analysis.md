@@ -31,10 +31,10 @@ The solution should provide:
 
 - Short sequences with few elements
 - Random sequences:
-    - 50 elements
-    - 100 elements
-    - 500 elements
-    - 1000 elements
+  - 50 elements
+  - 100 elements
+  - 500 elements
+  - 1000 elements
 
 ### Edge Cases
 
