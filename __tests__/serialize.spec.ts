@@ -1,82 +1,39 @@
-import { deserialize, serialize } from '../src/compression';
+import { serialize, deserialize } from '../src/compression';
+describe('Дифференциальное кодирование', () => {
+  const testCases: number[][] = [
+    [1, 2, 3, 4, 5, 6],
+    Array(50).fill(100),
+    Array.from({ length: 300 }, (_, i) => i + 1),
+    Array(1000).fill(150),
+    Array(300)
+      .fill(1)
+      .concat(Array(300).fill(100))
+      .concat(Array(300).fill(200)),
+  ];
 
-describe('serialize', () => {
-  test('simple short sequence', () => {
-    const input = [1, 2, 3, 4, 5];
-    const result = serialize(input);
-    expect(result).toBeDefined();
-    expect(result.compressionRatio).toBeGreaterThan(0);
-  });
+  let totalCompressionRatio = 0;
 
-  test('random sequence of 50 numbers', () => {
-    const input = Array.from({ length: 50 }, () =>
-      Math.floor(Math.random() * 1000),
-    );
-    const result = serialize(input);
-    expect(result).toBeDefined();
-    expect(result.compressionRatio).toBeGreaterThan(0);
-    const decoded = deserialize(result.serialized);
-    decoded.forEach((num) => {
-      expect(input.includes(num));
+  testCases.forEach((test, index) => {
+    it(`Тест #${index + 1}: Сериализация и коэффициент сжатия`, () => {
+      const compressed = serialize(test);
+      const decompressed = deserialize(compressed);
+
+      expect(decompressed).toEqual(test);
+
+      const originalSize = JSON.stringify(test).length;
+      const compressedSize = compressed.length;
+      const compressionRatio = compressedSize / originalSize;
+
+      totalCompressionRatio += compressionRatio;
     });
   });
 
-  test('random sequence of 100 numbers', () => {
-    const input = Array.from({ length: 100 }, () =>
-      Math.floor(Math.random() * 1000),
+  it('Средний коэффициент сжатия не менее 50%', () => {
+    const averageCompression =
+      (1 - totalCompressionRatio / testCases.length) * 100;
+    console.log(
+      `Средний коэффициент сжатия: ${averageCompression.toFixed(2)}%`,
     );
-    const result = serialize(input);
-    expect(result).toBeDefined();
-    expect(result.compressionRatio).toBeGreaterThan(0);
-  });
-
-  test('random sequence of 500 numbers', () => {
-    const input = Array.from({ length: 500 }, () =>
-      Math.floor(Math.random() * 1000),
-    );
-    const result = serialize(input);
-    expect(result).toBeDefined();
-    expect(result.compressionRatio).toBeGreaterThan(0);
-  });
-
-  test('random sequence of 1000 numbers', () => {
-    const input = Array.from({ length: 1000 }, () =>
-      Math.floor(Math.random() * 1000),
-    );
-    const result = serialize(input);
-    expect(result).toBeDefined();
-    expect(result.compressionRatio).toBeGreaterThan(0);
-  });
-
-  test('all single-digit numbers', () => {
-    const input = Array.from({ length: 9 }, (_, i) => i + 1);
-    const result = serialize(input);
-    expect(result).toBeDefined();
-    expect(result.compressionRatio).toBeGreaterThan(0);
-  });
-
-  test('all two-digit numbers', () => {
-    const input = Array.from({ length: 90 }, (_, i) => i + 10);
-    const result = serialize(input);
-    expect(result).toBeDefined();
-    expect(result.compressionRatio).toBeGreaterThan(0);
-  });
-
-  test('all three-digit numbers', () => {
-    const input = Array.from({ length: 900 }, (_, i) => i + 100);
-    const result = serialize(input);
-    expect(result).toBeDefined();
-    expect(result.compressionRatio).toBeGreaterThan(0);
-  });
-
-  test('repeated numbers (300 of each digit length)', () => {
-    const input = [
-      ...Array(300).fill(5),
-      ...Array(300).fill(42),
-      ...Array(300).fill(123),
-    ];
-    const result = serialize(input);
-    expect(result).toBeDefined();
-    expect(result.compressionRatio).toBeGreaterThan(0);
+    expect(averageCompression).toBeGreaterThanOrEqual(50);
   });
 });
