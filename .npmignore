@@ -1,0 +1,8 @@
+  __tests__/
+  src/
+  coverage/
+  .github/
+  .gitignore
+  jest.config.js
+  tsconfig.json
+  *.md
