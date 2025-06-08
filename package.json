@@ -1,18 +1,27 @@
 {
   "name": "sequences",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "build": "npx tsc --noEmit false",
     "test": "jest --coverage",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "lint": "eslint . --ext .js,.ts"
+    "lint": "eslint . --ext .js,.ts",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:major": "standard-version --release-as major",
+    "postrelease": "git push --follow-tags origin main"
   },
   "keywords": [
     "typescript",
     "sequences",
     "algorithms",
     "mathematics"
+  ],
+  "files": [
+    "dist"
   ],
   "author": "Nick Bespalov <nvbespalov@gmail.com>",
   "license": "ISC",
