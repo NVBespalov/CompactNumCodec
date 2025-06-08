@@ -1,4 +1,4 @@
-import { serialize, deserialize } from '../src/compression';
+import { deserialize, serialize } from '../compression';
 
 describe('Differential Encoding', () => {
   describe('Test case 1: Simple sequence', () => {
