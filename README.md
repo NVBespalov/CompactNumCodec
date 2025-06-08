@@ -28,15 +28,15 @@ The implementation includes the following test scenarios:
 
 1. Simple short sequences
 2. Random sequences:
-    - 50 numbers
-    - 100 numbers
-    - 500 numbers
-    - 1000 numbers
+   - 50 numbers
+   - 100 numbers
+   - 500 numbers
+   - 1000 numbers
 3. Edge cases:
-    - All single-digit numbers
-    - All two-digit numbers
-    - All three-digit numbers
-    - 900 numbers (300 unique numbers, each repeated 3 times)
+   - All single-digit numbers
+   - All two-digit numbers
+   - All three-digit numbers
+   - 900 numbers (300 unique numbers, each repeated 3 times)
 
 ## Installation
 
@@ -97,3 +97,22 @@ Tests are organized following these conventions:
 ### Example Test Implementation
 
 A typical test file structure:
+
+---
+
+## CLI Usage
+
+You can run the compression tool directly from the command line using the built-in CLI:
+
+- `<inputFile>` — Path to a `.json` file containing an array of integers, e.g. `[1,2,3,...]`
+- `<outputFile>` — Path where the compressed ASCII string will be written
+
+**Example:**
+
+
+**Input format:**  
+The input file should be a valid JSON array with integers in the range `[1, 300]`, with up to 1000 elements.
+
+After running, the CLI will display:
+- Progress bar
+- Handy info: original and compressed sizes, plus compression ratio.
